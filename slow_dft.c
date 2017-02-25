@@ -31,32 +31,3 @@ void slow_dft(Complex* X,float* x,unsigned int N){
     MultipleWithScalar(X+i, 1.0/N);
   }
 }
-
-void recursive_fft(Complex* input,Complex* output, int N){
-    Complex a[N/2], b[N/2], c[N/2], d[N/2];
-    int k;
-    
-    if(N==1){
-        output[0].Real = input[0].Real;
-        output[0].Imag = input[0].Imag;
-    }
-    
-    for(k=0;k<N;++k){
-        a[k].Real = input[2*k].Real;
-        a[k].Imag = input[2*k].Imag;
-        b[k].Real = input[2*k+1].Real;
-        b[k].Imag = input[2*k+1].Imag;
-    }
-    
-    recursive_fft(a,c,N/2);
-    recursive_fft(b,d,N/2);
-    
-    Complex* tempC;
-    float tempF;
-    
-    for(k=0;k<N/2;++k){
-        tempC = W(N,1,k);
-        tempF =  
-    }
-    
-}
