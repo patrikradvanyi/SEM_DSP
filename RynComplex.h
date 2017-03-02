@@ -1,8 +1,6 @@
 #ifndef RYNCOMPLEX_H
 #define RYNCOMPLEX_H
 
-#define PI 3.14159265
-
 typedef struct{
   float Real;  /* A komplex szám valós része */
   float Imag;  /* A komplex szám képzetes része */
