@@ -34,4 +34,6 @@ void revbit_short(float* data, unsigned int logN){
   for(i=0;i<N;++i){
     data[i] = temp[revbit(i,logN)];	/* Rendezés végrehajtása. */
   }
+
+  free(temp);
 }

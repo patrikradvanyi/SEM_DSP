@@ -20,5 +20,8 @@ int main(void) {
 		printf("x[%d]=%6.4f =H=> h[%d]=%6.4f ==> r[%d]=%6.4f\n",i,x[i],i,h[i],i,r[i]);	/* Eredmények kijelézése. */
 	}
 
+	free(r);
+	free(h);
+
 	return 0;
 }
